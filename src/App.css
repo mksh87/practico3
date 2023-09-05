@@ -1,3 +1,7 @@
+
+
+
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,85 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Estilos para los componentes */
+
+/* Estilos para el componente MenuComponent */
+.menu-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.game-grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.jugada {
+  display: grid;
+  grid-template-columns: 5vh 4fr 5vh;
+}
+
+.game-grid div {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.casillero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  font-size: 24px;
+}
+
+.solid {
+  font-weight: bold;
+}
+
+.fa-arrow-right {
+  color: green;
+}
+
+.fa-arrow-left {
+  color: red;
 }
