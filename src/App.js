@@ -6,6 +6,8 @@ import PuntosComponent from "./components/PuntosComponent";
 import NombreComponent from "./components/NombreComponent";
 import FacilComponent from "./components/FacilComponent";
 import MedioComponent from "./components/MedioComponent";
+import DificilComponent from "./components/DificilComponent";
+import ExpertoComponent from "./components/ExpertoComponent";
 
 function App() {
   const [currentStep, setCurrentStep] = useState(1); // Estado para controlar el paso actual
@@ -20,8 +22,7 @@ function App() {
 
   // Función para reiniciar el juego
   const restartGame = () => {
-    setCurrentStep(1);
-    setUserName("");
+    setCurrentStep(2);
     setSelectedMode("");
     setSelectedPoints(0);
   };
@@ -57,6 +58,12 @@ function App() {
       )}
       {currentStep === 4 && selectedMode === "medio" && (
         <MedioComponent userName={userName} pointsToWin={selectedPoints} />
+      )}
+      {currentStep === 4 && selectedMode === "dificil" && (
+        <DificilComponent userName={userName} pointsToWin={selectedPoints} />
+      )}
+      {currentStep === 4 && selectedMode === "experto" && (
+        <ExpertoComponent userName={userName} pointsToWin={selectedPoints} />
       )}
       {currentStep === 5 && (
         <button onClick={restartGame}>Reiniciar Juego</button>
