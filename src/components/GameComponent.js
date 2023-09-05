@@ -26,8 +26,28 @@ const GameComponent = ({ userName, pointsToWin, jugadas, mensajes }) => {
     const computer = Math.floor(Math.random() * jugadas.length);
     const usuario = jugadas.indexOf(choice);
 
+    // Eliminar el color de fondo de todos los divs
+    for (let i = 0; i < jugadas.length; i++) {
+      const playerDiv = document.getElementById(`playerDiv${i}`);
+      const computerDiv = document.getElementById(`compDiv${i}`);
+      if (playerDiv) {
+        playerDiv.style.backgroundColor = "";
+      }
+      if (computerDiv) {
+        computerDiv.style.backgroundColor = "";
+      }
+    }
+
     setUserChoice(usuario);
     setComputerChoice(computer);
+
+    // Cambiar el color del div del jugador
+    const playerDiv = document.getElementById(`playerDiv${usuario}`);
+    playerDiv.style.backgroundColor = "green";
+
+    // Cambiar el color del div de la computadora
+    const computerDiv = document.getElementById(`compDiv${computer}`);
+    computerDiv.style.backgroundColor = "red";
 
     if (usuario === computer) {
       setRoundResult(`Empate. Muy poco original copiar a tu rival.`);

@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import ppt3 from "../img/ppt3.svg";
+import ppt5 from "../img/ppt5.svg";
+import ppt7 from "../img/ppt7.svg";
+import ppt9 from "../img/ppt9.svg";
 
 const ModoComponent = ({ onModeSelect }) => {
   // eslint-disable-next-line
@@ -10,13 +14,43 @@ const ModoComponent = ({ onModeSelect }) => {
   };
 
   return (
-    <div>
+    <>
       <h2>Selecciona el modo de juego:</h2>
-      <button onClick={() => handleModeSelect("facil")}>Fácil</button>
-      <button onClick={() => handleModeSelect("medio")}>Medio</button>
-      <button onClick={() => handleModeSelect("dificil")}>Dificil</button>
-      <button onClick={() => handleModeSelect("experto")}>Experto</button>
-    </div>
+      <div className="mode-button-container">
+        <a
+          href="#"
+          className="game-mode-link"
+          onClick={() => handleModeSelect("facil")}
+        >
+          <img src={ppt3} alt="Fácil" />
+          Fácil
+        </a>
+        <a
+          href="#"
+          className="game-mode-link"
+          onClick={() => handleModeSelect("medio")}
+        >
+          <img src={ppt5} alt="Medio" />
+          Medio
+        </a>
+        <a
+          href="#"
+          className="game-mode-link"
+          onClick={() => handleModeSelect("dificil")}
+        >
+          <img src={ppt7} alt="Difícil" />
+          Difícil
+        </a>
+        <a
+          href="#"
+          className="game-mode-link"
+          onClick={() => handleModeSelect("experto")}
+        >
+          <img src={ppt9} alt="Experto" />
+          Experto
+        </a>
+      </div>
+    </>
   );
 };
 
