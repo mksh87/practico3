@@ -32,9 +32,11 @@ const GameComponent = ({ userName, pointsToWin, jugadas, mensajes }) => {
       const computerDiv = document.getElementById(`compDiv${i}`);
       if (playerDiv) {
         playerDiv.style.backgroundColor = "";
+        playerDiv.textContent = "";
       }
       if (computerDiv) {
         computerDiv.style.backgroundColor = "";
+        computerDiv.textContent = "";
       }
     }
 
@@ -44,10 +46,12 @@ const GameComponent = ({ userName, pointsToWin, jugadas, mensajes }) => {
     // Cambiar el color del div del jugador
     const playerDiv = document.getElementById(`playerDiv${usuario}`);
     playerDiv.style.backgroundColor = "green";
+    playerDiv.innerHTML = "&#128526;";
 
     // Cambiar el color del div de la computadora
     const computerDiv = document.getElementById(`compDiv${computer}`);
     computerDiv.style.backgroundColor = "red";
+    computerDiv.innerHTML = "&#128187;";
 
     if (usuario === computer) {
       setRoundResult(`Empate. Muy poco original copiar a tu rival.`);
@@ -56,12 +60,20 @@ const GameComponent = ({ userName, pointsToWin, jugadas, mensajes }) => {
         if ((usuario + r) % jugadas.length === computer) {
           setScoreComputer(scoreComputer + 1);
           setRoundResult(
-            `${jugadas[computer]} ${mensajes[usuario][computer]} ${jugadas[usuario]}. Ha ganado la computadora. Era esperable.`
+            `${jugadas[computer].toUpperCase()} ${
+              mensajes[usuario][computer]
+            } ${jugadas[
+              usuario
+            ].toUpperCase()}. Ha ganado la computadora. Era esperable.`
           );
         } else if ((usuario + 1 + r) % jugadas.length === computer) {
           setScorePlayer(scorePlayer + 1);
           setRoundResult(
-            `${jugadas[usuario]} ${mensajes[usuario][computer]} ${jugadas[computer]}. ¡Ganaste! Seguramente fue con suerte.`
+            `${jugadas[usuario].toUpperCase()} ${
+              mensajes[usuario][computer]
+            } ${jugadas[
+              computer
+            ].toUpperCase()}. ¡Ganaste! Seguramente fue con suerte.`
           );
         }
       }
@@ -75,9 +87,7 @@ const GameComponent = ({ userName, pointsToWin, jugadas, mensajes }) => {
       <div className="game-grid">
         {jugadas.map((jugada, index) => (
           <div className="jugada" key={jugada}>
-            <div className="casillero" id={`playerDiv${index}`}>
-              <span className="icon solid fa-arrow-right"></span>
-            </div>
+            <div className="casillero" id={`playerDiv${index}`}></div>
             <button
               className="button fit eleccion"
               name="eleccion"
@@ -87,9 +97,7 @@ const GameComponent = ({ userName, pointsToWin, jugadas, mensajes }) => {
             >
               {jugada.toUpperCase()}
             </button>
-            <div className="casillero" id={`compDiv${index}`}>
-              <span className="icon solid fa-arrow-left"></span>
-            </div>
+            <div className="casillero" id={`compDiv${index}`}></div>
           </div>
         ))}
       </div>

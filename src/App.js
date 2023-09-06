@@ -44,7 +44,9 @@ function App() {
           }}
         />
       )}
-      {currentStep === 2 && <ModoComponent onModeSelect={handleModeSelect} />}
+      {currentStep === 2 && (
+        <ModoComponent userName={userName} onModeSelect={handleModeSelect} />
+      )}
       {currentStep === 3 && (
         <PuntosComponent
           onPointsSelect={(points) => {
@@ -53,21 +55,23 @@ function App() {
           }}
         />
       )}
-      {currentStep === 4 && selectedMode === "facil" && (
-        <FacilComponent userName={userName} pointsToWin={selectedPoints} />
-      )}
-      {currentStep === 4 && selectedMode === "medio" && (
-        <MedioComponent userName={userName} pointsToWin={selectedPoints} />
-      )}
-      {currentStep === 4 && selectedMode === "dificil" && (
-        <DificilComponent userName={userName} pointsToWin={selectedPoints} />
-      )}
-      {currentStep === 4 && selectedMode === "experto" && (
-        <ExpertoComponent userName={userName} pointsToWin={selectedPoints} />
-      )}
-      {currentStep === 5 && (
-        <button onClick={restartGame}>Reiniciar Juego</button>
-      )}
+      <>
+        {currentStep === 4 && selectedMode === "facil" && (
+          <FacilComponent userName={userName} pointsToWin={selectedPoints} />
+        )}
+        {currentStep === 4 && selectedMode === "medio" && (
+          <MedioComponent userName={userName} pointsToWin={selectedPoints} />
+        )}
+        {currentStep === 4 && selectedMode === "dificil" && (
+          <DificilComponent userName={userName} pointsToWin={selectedPoints} />
+        )}
+        {currentStep === 4 && selectedMode === "experto" && (
+          <ExpertoComponent userName={userName} pointsToWin={selectedPoints} />
+        )}
+        {currentStep === 5 && (
+          <button onClick={restartGame}>Reiniciar Juego</button>
+        )}
+      </>
     </div>
   );
 }

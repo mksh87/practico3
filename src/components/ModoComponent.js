@@ -4,7 +4,7 @@ import ppt5 from "../img/ppt5.svg";
 import ppt7 from "../img/ppt7.svg";
 import ppt9 from "../img/ppt9.svg";
 
-const ModoComponent = ({ onModeSelect }) => {
+const ModoComponent = ({ userName, onModeSelect }) => {
   // eslint-disable-next-line
   const [selectedMode, setSelectedMode] = useState(""); // Estado para almacenar el modo seleccionado
 
@@ -15,7 +15,22 @@ const ModoComponent = ({ onModeSelect }) => {
 
   return (
     <>
-      <h2>Selecciona el modo de juego:</h2>
+      <h1>¡Bienvenido..... {userName}!</h1>
+      <h5>¡Tranquilo! Te dejaremos jugar a pesar del nombre...</h5>
+      <h4>
+        Te explico. PPT tiene varias dificultades, cada una permite elegir entre
+        distinta cantidad de opciones: desde el clásico PPT de tres hasta la
+        versión manija de nueve. Hay de 25 opciones, y hasta existe uno de 101
+        opciones!! Pero ya me dio pereza programar tanto.
+      </h4>
+      <h4>
+        Puedes ver la descripción de todas las versiones originales haciendo
+        clic{" "}
+        <a href="https://www.umop.com/rps.htm" target="_blank">
+          AQUI
+        </a>
+      </h4>
+      <h3>¿Qué tan loco estás?</h3>
       <div className="mode-button-container">
         <a
           href="#"

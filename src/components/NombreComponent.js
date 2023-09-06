@@ -17,7 +17,14 @@ const NombreComponent = ({ onNameSubmit }) => {
 
   return (
     <div>
-      <h2>Ingresa tu nombre:</h2>
+      <h1>
+        Bienvenido a <strong>piedra papel o tijeras</strong>
+      </h1>
+      <h4>
+        Demuestra tu infinita habilidad en una épica batalla contra el
+        ordenador.
+      </h4>
+      <h4>Para comenzar, por favor ingresa tu nombre:</h4>
       <input type="text" value={name} onChange={handleNameChange} />
       <button onClick={handleSubmit}>Ingresar</button>
     </div>

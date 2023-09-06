@@ -54,9 +54,47 @@ body {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 5vw;
+  text-align: center;
+  padding-top: 2%;
+}
+
+h2 {
+  font-size: 4vw;
+  text-align: center;
+  padding-top: 2%;
+}
+
+h3 {
+  font-size: 3.5vw;
+  text-align: center;
+  padding-top: 2%;
+}
+
+h4 {
+  font-size: 2.5vw;
+  text-align: center;
+  padding-top: 2%;
+}
+
+h5 {
+  font-size: 2vw;
   text-align: center;
 }
+
+h6 {
+  font-size: 1vw;
+  text-align: center;
+}
+
+
+button {
+  padding: 1%;
+  font-size: 2vw;
+  background-color: rgb(228, 189, 189);
+  border-radius: 10px;
+}
+
 
 /* Estilos para los componentes */
 
@@ -71,10 +109,10 @@ h1 {
 }
 
 .game-grid {
-  display: grid;
-  gap: 10px;
+  display: inline-grid;
   margin-top: 20px;
   text-align: center;
+  max-width: 500px;
 }
 
 .jugada {
@@ -84,9 +122,8 @@ h1 {
 
 .game-grid div {
   text-align: center;
-  padding: 10px;
-  border: 1px solid #ccc;
-  background-color: #fff;
+  justify-content: center;
+  border-width: 0px;
 }
 
 .button {
@@ -102,6 +139,12 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-self: center;
+  border-radius: 50%;
+  height: fit-content;
+  width: fit-content;
+  padding: 10px;
+
 }
 
 .icon {
@@ -145,4 +188,23 @@ h1 {
 .game-mode-link img {
   height: 80%;
   width: 80%;
+}
+
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 3000ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 3000ms;
 }

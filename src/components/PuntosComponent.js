@@ -10,7 +10,10 @@ const PuntosComponent = ({ onPointsSelect }) => {
 
   return (
     <div>
-      <h2>Selecciona la cantidad de puntos para ganar:</h2>
+      <h3>
+        Selecciona la cantidad de puntos para ganar. Mientras más elijas, más
+        probabilidad tendrás de una remontada épica!!
+      </h3>
       <button onClick={() => handlePointsSelect(1)}>1 punto</button>
       <button onClick={() => handlePointsSelect(3)}>3 puntos</button>
       <button onClick={() => handlePointsSelect(5)}>5 puntos</button>
