@@ -87,9 +87,9 @@ const GameComponent = ({ userName, pointsToWin, jugadas, mensajes }) => {
       <div className="game-grid">
         {jugadas.map((jugada, index) => (
           <div className="jugada" key={jugada}>
-            <div className="casillero" id={`playerDiv${index}`}></div>
+            <div className="casillero1" id={`playerDiv${index}`}></div>
             <button
-              className="button fit eleccion"
+              className="boton-jugada"
               name="eleccion"
               id={jugada}
               onClick={() => handleUserChoice(jugada)}
@@ -97,20 +97,28 @@ const GameComponent = ({ userName, pointsToWin, jugadas, mensajes }) => {
             >
               {jugada.toUpperCase()}
             </button>
-            <div className="casillero" id={`compDiv${index}`}></div>
+            <div className="casillero2" id={`compDiv${index}`}></div>
           </div>
         ))}
       </div>
       <div>
-        <div>Resultado de la ronda: {roundResult}</div>
-        <div>
-          Puntos de {userName}: {scorePlayer}
+        <h3 className="ronda">{roundResult}</h3>
+        <div className="points">
+          <div className="user-points">
+            {userName} <br />{" "}
+            <span className="point-number">{scorePlayer}</span>
+          </div>
+          <div className="pc-points">
+            Computadora
+            <br /> <span className="point-number">{scoreComputer}</span>
+          </div>
         </div>
-        <div>Puntos de la computadora: {scoreComputer}</div>
         {gameWinner ? (
-          <div>Ganador de la partida: {gameWinner}</div>
+          <h1 className="ganador">
+            Final de la partida. {gameWinner} se lleva la victoria!
+          </h1>
         ) : (
-          <div>Ganador de la partida: {/* Determinar el ganador aquí */}</div>
+          <div className="ganador"></div>
         )}
       </div>
     </div>

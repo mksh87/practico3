@@ -40,7 +40,7 @@
 
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: #f0f0f0;
   margin: 0;
   padding: 0;
@@ -109,15 +109,11 @@ button {
 }
 
 .game-grid {
-  display: inline-grid;
+  display: grid;
   margin-top: 20px;
   text-align: center;
-  max-width: 500px;
-}
-
-.jugada {
-  display: grid;
-  grid-template-columns: 5vh 4fr 5vh;
+  grid-template-columns: repeat(auto-fit, minmax(40ch, 1fr));
+  /*max-width: 500px;*/
 }
 
 .game-grid div {
@@ -126,26 +122,59 @@ button {
   border-width: 0px;
 }
 
-.button {
+.jugada {
+  display: grid;
+  grid-template-columns: 5vh 4fr 5vh;
+  margin: 5px;
+}
+
+.boton-jugada {
   background-color: #3498db;
   color: white;
   border: none;
   padding: 10px 20px;
   margin: 5px;
   cursor: pointer;
+  font-size: 3vw;
 }
 
-.casillero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.casillero1 {
   align-self: center;
-  border-radius: 50%;
-  height: fit-content;
   width: fit-content;
-  padding: 10px;
-
+  padding: 4px 15px 4px 5px;
+  clip-path: polygon(0 0, 50% 0, 100% 50%, 50% 100%, 0 100%, 0 0);
 }
+
+.casillero2 {
+  align-self: center;
+  width: fit-content;
+  padding: 4px 5px 4px 15px;
+  clip-path: polygon(0 50%, 50% 0, 100% 0, 100% 100%, 50% 100%, 0 50%);
+}
+
+.ronda {}
+
+.points {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 4vw;
+  margin: 3% 15%;
+  gap: 10%;
+}
+
+.point-number {
+  font-size: 8vw;
+}
+
+.user-points {
+  border: 1px solid black;
+}
+
+.pc-points {
+  border: 1px solid black;
+}
+
+.ganador {}
 
 .icon {
   font-size: 24px;
@@ -154,15 +183,6 @@ button {
 .solid {
   font-weight: bold;
 }
-
-.fa-arrow-right {
-  color: green;
-}
-
-.fa-arrow-left {
-  color: red;
-}
-
 
 .mode-button-container {
   display: grid;
