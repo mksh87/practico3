@@ -38,6 +38,16 @@
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -47,44 +57,56 @@ body {
   text-align: center;
 }
 
+.component {
+  animation: fadeIn 3s;
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
 
+h6,
+h5,
+h4,
+h3,
+h2,
+h1 {
+  text-align: center;
+  padding: 2% 5% 0% 5%;
+}
+
+
 h1 {
   font-size: 5vw;
-  text-align: center;
-  padding-top: 2%;
+
 }
 
 h2 {
   font-size: 4vw;
-  text-align: center;
   padding-top: 2%;
 }
 
 h3 {
   font-size: 3.5vw;
-  text-align: center;
   padding-top: 2%;
 }
 
 h4 {
   font-size: 2.5vw;
-  text-align: center;
   padding-top: 2%;
 }
 
 h5 {
   font-size: 2vw;
-  text-align: center;
+  padding: 0% 5%;
+
 }
 
 h6 {
   font-size: 1vw;
-  text-align: center;
+  padding: 0% 5%;
 }
 
 
@@ -95,6 +117,9 @@ button {
   border-radius: 10px;
 }
 
+.homegif {
+  max-width: 60%;
+}
 
 /* Estilos para los componentes */
 
@@ -124,7 +149,7 @@ button {
 
 .jugada {
   display: grid;
-  grid-template-columns: 5vh 4fr 5vh;
+  grid-template-columns: 6vh 4fr 6vh;
   margin: 5px;
 }
 
@@ -133,48 +158,63 @@ button {
   color: white;
   border: none;
   padding: 10px 20px;
-  margin: 5px;
   cursor: pointer;
   font-size: 3vw;
+  margin-left: 4px;
+  filter: drop-shadow(0px 2px 2px darkblue);
+}
+
+.casillero1,
+.casillero2 {
+  border-radius: 43%;
+  align-self: center;
+  width: fit-content;
+
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
 }
 
 .casillero1 {
-  align-self: center;
-  width: fit-content;
   padding: 4px 15px 4px 5px;
   clip-path: polygon(0 0, 50% 0, 100% 50%, 50% 100%, 0 100%, 0 0);
 }
 
 .casillero2 {
-  align-self: center;
-  width: fit-content;
   padding: 4px 5px 4px 15px;
   clip-path: polygon(0 50%, 50% 0, 100% 0, 100% 100%, 50% 100%, 0 50%);
 }
 
-.ronda {}
-
 .points {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 0.7fr 1fr;
   font-size: 4vw;
-  margin: 3% 15%;
-  gap: 10%;
+  margin: 3% 10%;
+  gap: 2%;
 }
 
 .point-number {
   font-size: 8vw;
 }
 
-.user-points {
-  border: 1px solid black;
+.objetivo-number {
+  font-size: 5vw;
 }
 
+.user-points,
 .pc-points {
   border: 1px solid black;
+  border-radius: 20px;
+  line-height: initial;
 }
 
-.ganador {}
+.objetivo-points {
+  font-size: 2.5vw;
+  padding-top: 6px;
+}
+
+/* .ganador {} */
 
 .icon {
   font-size: 24px;
@@ -208,23 +248,4 @@ button {
 .game-mode-link img {
   height: 80%;
   width: 80%;
-}
-
-
-.fade-enter {
-  opacity: 0;
-}
-
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity 3000ms;
-}
-
-.fade-exit {
-  opacity: 1;
-}
-
-.fade-exit-active {
-  opacity: 0;
-  transition: opacity 3000ms;
 }

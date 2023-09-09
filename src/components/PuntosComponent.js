@@ -9,7 +9,7 @@ const PuntosComponent = ({ onPointsSelect }) => {
   };
 
   return (
-    <div>
+    <div className="component">
       <h3>
         Selecciona la cantidad de puntos para ganar. Mientras más elijas, más
         probabilidad tendrás de una remontada épica!!

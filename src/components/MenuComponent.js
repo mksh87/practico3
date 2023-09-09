@@ -1,14 +1,21 @@
 import React from "react";
 
-const MenuComponent = ({ onRestart }) => {
-  const handleRestart = () => {
-    // Lógica para reiniciar el juego
-    onRestart();
+const MenuComponent = ({ onChangeMode, onChangeName, onChangePoints }) => {
+  const handleChangeMode = () => {
+    onChangeMode();
+  };
+  const handleChangeName = () => {
+    onChangeName();
+  };
+  const handleChangePoints = () => {
+    onChangePoints();
   };
 
   return (
     <div>
-      <button onClick={handleRestart}>Volver a la selección de modo</button>
+      <button onClick={handleChangeName}>Cambiar nombre</button>
+      <button onClick={handleChangeMode}>Selección de modo</button>
+      <button onClick={handleChangePoints}>Reiniciar partida</button>
     </div>
   );
 };

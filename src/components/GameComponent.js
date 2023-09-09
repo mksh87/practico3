@@ -81,9 +81,21 @@ const GameComponent = ({ userName, pointsToWin, jugadas, mensajes }) => {
   };
 
   return (
-    <div>
-      <h2>Jugador: {userName}</h2>
-      <h2>Puntos para ganar: {pointsToWin}</h2>
+    <div className="component">
+      <div className="points">
+        <div className="user-points">
+          {userName} <br /> <span className="point-number">{scorePlayer}</span>
+        </div>
+        <div className="objetivo-points">
+          Objetivo
+          <br /> <span className="objetivo-number">{pointsToWin}</span>
+        </div>
+        <div className="pc-points">
+          Computadora
+          <br /> <span className="point-number">{scoreComputer}</span>
+        </div>
+      </div>
+
       <div className="game-grid">
         {jugadas.map((jugada, index) => (
           <div className="jugada" key={jugada}>
@@ -103,16 +115,7 @@ const GameComponent = ({ userName, pointsToWin, jugadas, mensajes }) => {
       </div>
       <div>
         <h3 className="ronda">{roundResult}</h3>
-        <div className="points">
-          <div className="user-points">
-            {userName} <br />{" "}
-            <span className="point-number">{scorePlayer}</span>
-          </div>
-          <div className="pc-points">
-            Computadora
-            <br /> <span className="point-number">{scoreComputer}</span>
-          </div>
-        </div>
+
         {gameWinner ? (
           <h1 className="ganador">
             Final de la partida. {gameWinner} se lleva la victoria!

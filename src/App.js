@@ -20,10 +20,23 @@ function App() {
     setCurrentStep(currentStep + 1);
   };
 
-  // Función para reiniciar el juego
-  const restartGame = () => {
+  // Función para volver a pantalla de cambio de nombre
+  const changeName = () => {
+    setCurrentStep(1);
+    setSelectedMode("");
+    setSelectedPoints(0);
+  };
+
+  // Función para reiniciar y cambiar de modo
+  const restartMode = () => {
     setCurrentStep(2);
     setSelectedMode("");
+    setSelectedPoints(0);
+  };
+
+  // Función para reiniciar y elegir puntaje
+  const restartPoints = () => {
+    setCurrentStep(3);
     setSelectedPoints(0);
   };
 
@@ -35,7 +48,12 @@ function App() {
 
   return (
     <div>
-      <MenuComponent onRestart={restartGame} />
+      <MenuComponent
+        onChangeMode={restartMode}
+        onChangeName={changeName}
+        onChangePoints={restartPoints}
+      />
+
       {currentStep === 1 && (
         <NombreComponent
           onNameSubmit={(name) => {
@@ -44,9 +62,11 @@ function App() {
           }}
         />
       )}
+
       {currentStep === 2 && (
         <ModoComponent userName={userName} onModeSelect={handleModeSelect} />
       )}
+
       {currentStep === 3 && (
         <PuntosComponent
           onPointsSelect={(points) => {
@@ -55,6 +75,7 @@ function App() {
           }}
         />
       )}
+
       <>
         {currentStep === 4 && selectedMode === "facil" && (
           <FacilComponent userName={userName} pointsToWin={selectedPoints} />
@@ -68,8 +89,9 @@ function App() {
         {currentStep === 4 && selectedMode === "experto" && (
           <ExpertoComponent userName={userName} pointsToWin={selectedPoints} />
         )}
+
         {currentStep === 5 && (
-          <button onClick={restartGame}>Reiniciar Juego</button>
+          <button onClick={restartMode}>Reiniciar Juego</button>
         )}
       </>
     </div>

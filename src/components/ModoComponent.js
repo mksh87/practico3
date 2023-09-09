@@ -14,22 +14,9 @@ const ModoComponent = ({ userName, onModeSelect }) => {
   };
 
   return (
-    <>
+    <div className="component">
       <h1>¡Bienvenido..... {userName}!</h1>
       <h5>¡Tranquilo! Te dejaremos jugar a pesar del nombre...</h5>
-      <h4>
-        Te explico. PPT tiene varias dificultades, cada una permite elegir entre
-        distinta cantidad de opciones: desde el clásico PPT de tres hasta la
-        versión manija de nueve. Hay de 25 opciones, y hasta existe uno de 101
-        opciones!! Pero ya me dio pereza programar tanto.
-      </h4>
-      <h4>
-        Puedes ver la descripción de todas las versiones originales haciendo
-        clic{" "}
-        <a href="https://www.umop.com/rps.htm" target="_blank">
-          AQUI
-        </a>
-      </h4>
       <h3>¿Qué tan loco estás?</h3>
       <div className="mode-button-container">
         <a
@@ -65,7 +52,20 @@ const ModoComponent = ({ userName, onModeSelect }) => {
           Experto
         </a>
       </div>
-    </>
+      <h4>
+        Te explico. PPT tiene varias dificultades, cada una permite elegir entre
+        distinta cantidad de opciones: desde el clásico PPT de tres hasta la
+        versión manija de nueve. Hay de 25 opciones, y hasta existe uno de 101
+        opciones!! Pero ya me dio pereza programar tanto.
+      </h4>
+      <h4>
+        Puedes ver la descripción de todas las versiones originales haciendo
+        clic{" "}
+        <a href="https://www.umop.com/rps.htm" target="_blank">
+          AQUI
+        </a>
+      </h4>
+    </div>
   );
 };
 

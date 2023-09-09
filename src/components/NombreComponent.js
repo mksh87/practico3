@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import hands from "../img/hands.gif";
 
 const NombreComponent = ({ onNameSubmit }) => {
   const [name, setName] = useState("");
@@ -16,10 +17,11 @@ const NombreComponent = ({ onNameSubmit }) => {
   };
 
   return (
-    <div>
+    <div className="component">
       <h1>
         Bienvenido a <strong>piedra papel o tijeras</strong>
       </h1>
+      <img className="homegif" src={hands}></img>
       <h4>
         Demuestra tu infinita habilidad en una épica batalla contra el
         ordenador.
