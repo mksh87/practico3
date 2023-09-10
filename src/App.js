@@ -4,10 +4,7 @@ import MenuComponent from "./components/MenuComponent";
 import ModoComponent from "./components/ModoComponent";
 import PuntosComponent from "./components/PuntosComponent";
 import NombreComponent from "./components/NombreComponent";
-import FacilComponent from "./components/FacilComponent";
-import MedioComponent from "./components/MedioComponent";
-import DificilComponent from "./components/DificilComponent";
-import ExpertoComponent from "./components/ExpertoComponent";
+import LevelComponent from "./components/LevelComponent";
 
 function App() {
   const [currentStep, setCurrentStep] = useState(1); // Estado para controlar el paso actual
@@ -47,7 +44,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="main">
       <MenuComponent
         onChangeMode={restartMode}
         onChangeName={changeName}
@@ -76,24 +73,13 @@ function App() {
         />
       )}
 
-      <>
-        {currentStep === 4 && selectedMode === "facil" && (
-          <FacilComponent userName={userName} pointsToWin={selectedPoints} />
-        )}
-        {currentStep === 4 && selectedMode === "medio" && (
-          <MedioComponent userName={userName} pointsToWin={selectedPoints} />
-        )}
-        {currentStep === 4 && selectedMode === "dificil" && (
-          <DificilComponent userName={userName} pointsToWin={selectedPoints} />
-        )}
-        {currentStep === 4 && selectedMode === "experto" && (
-          <ExpertoComponent userName={userName} pointsToWin={selectedPoints} />
-        )}
-
-        {currentStep === 5 && (
-          <button onClick={restartMode}>Reiniciar Juego</button>
-        )}
-      </>
+      {currentStep === 4 && (
+        <LevelComponent
+          userName={userName}
+          pointsToWin={selectedPoints}
+          onSelectedMode={selectedMode}
+        />
+      )}
     </div>
   );
 }

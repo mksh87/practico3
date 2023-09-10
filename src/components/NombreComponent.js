@@ -16,6 +16,12 @@ const NombreComponent = ({ onNameSubmit }) => {
     }
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleSubmit();
+    }
+  };
+
   return (
     <div className="component">
       <h1>
@@ -27,7 +33,12 @@ const NombreComponent = ({ onNameSubmit }) => {
         ordenador.
       </h4>
       <h4>Para comenzar, por favor ingresa tu nombre:</h4>
-      <input type="text" value={name} onChange={handleNameChange} />
+      <input
+        type="text"
+        value={name}
+        onChange={handleNameChange}
+        onKeyPress={handleKeyPress}
+      />
       <button onClick={handleSubmit}>Ingresar</button>
     </div>
   );
