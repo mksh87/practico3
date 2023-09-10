@@ -1,6 +1,7 @@
 {
-  "short_name": "Piedra Papel Tijeras",
+  "short_name": "PPT",
   "name": "Piedra Papel Tijeras",
+  "description": "Piedra Papel Tijeras con varios modos de juego",
   "icons": [
     {
       "src": "favicon.ico",
