@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/practico3/static/css/main.792e308e.css",
-    "main.js": "/practico3/static/js/main.c65c6642.js",
+    "main.js": "/practico3/static/js/main.bbf6fac0.js",
     "static/js/787.f9640105.chunk.js": "/practico3/static/js/787.f9640105.chunk.js",
     "static/media/logo192.png": "/practico3/static/media/logo192.26930985ac6d32df41b0.png",
     "static/media/Brandon-Grotesque-Cond-Web-Bold.woff": "/practico3/static/media/Brandon-Grotesque-Cond-Web-Bold.2648aba5ee5dca9698ba.woff",
@@ -11,11 +11,11 @@
     "static/media/ppt3.svg": "/practico3/static/media/ppt3.d964d1909c4238a574029a2bd1d5f037.svg",
     "index.html": "/practico3/index.html",
     "main.792e308e.css.map": "/practico3/static/css/main.792e308e.css.map",
-    "main.c65c6642.js.map": "/practico3/static/js/main.c65c6642.js.map",
+    "main.bbf6fac0.js.map": "/practico3/static/js/main.bbf6fac0.js.map",
     "787.f9640105.chunk.js.map": "/practico3/static/js/787.f9640105.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.792e308e.css",
-    "static/js/main.c65c6642.js"
+    "static/js/main.bbf6fac0.js"
   ]
 }
