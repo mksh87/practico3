@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const PuntosComponent = ({ onPointsSelect }) => {
+  // eslint-disable-next-line
   const [selectedPoints, setSelectedPoints] = useState(1);
 
   const handlePointsSelect = (points) => {
