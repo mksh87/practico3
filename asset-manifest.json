@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/practico3/static/css/main.22ec548f.css",
-    "main.js": "/practico3/static/js/main.e08c7e95.js",
+    "main.css": "/practico3/static/css/main.792e308e.css",
+    "main.js": "/practico3/static/js/main.f69128fc.js",
     "static/js/787.f9640105.chunk.js": "/practico3/static/js/787.f9640105.chunk.js",
-    "static/media/hands.gif": "/practico3/static/media/hands.a823e33e9677c6ca558d.gif",
+    "static/media/logo192.png": "/practico3/static/media/logo192.26930985ac6d32df41b0.png",
     "static/media/Brandon-Grotesque-Cond-Web-Bold.woff": "/practico3/static/media/Brandon-Grotesque-Cond-Web-Bold.2648aba5ee5dca9698ba.woff",
     "static/media/ppt9.svg": "/practico3/static/media/ppt9.13eb3060b8f71001303bedb5ec61e6ae.svg",
     "static/media/ppt5.svg": "/practico3/static/media/ppt5.cf56b81d7aaf6d067e57fc7836c2221b.svg",
     "static/media/ppt7.svg": "/practico3/static/media/ppt7.2f6648b2e0a92f298e0c6482a0111d1d.svg",
     "static/media/ppt3.svg": "/practico3/static/media/ppt3.d964d1909c4238a574029a2bd1d5f037.svg",
     "index.html": "/practico3/index.html",
-    "main.22ec548f.css.map": "/practico3/static/css/main.22ec548f.css.map",
-    "main.e08c7e95.js.map": "/practico3/static/js/main.e08c7e95.js.map",
+    "main.792e308e.css.map": "/practico3/static/css/main.792e308e.css.map",
+    "main.f69128fc.js.map": "/practico3/static/js/main.f69128fc.js.map",
     "787.f9640105.chunk.js.map": "/practico3/static/js/787.f9640105.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.22ec548f.css",
-    "static/js/main.e08c7e95.js"
+    "static/css/main.792e308e.css",
+    "static/js/main.f69128fc.js"
   ]
 }
