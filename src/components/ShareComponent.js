@@ -5,8 +5,8 @@ function ShareButton() {
     if (navigator.share) {
       navigator
         .share({
-          title: "Título de tu App",
-          text: "Descripción de tu App",
+          title: "Piedra Papel Tijeras",
+          text: "Juega Piedra-Papel-Tijeras",
           url: window.location.href,
         })
         .then(() => console.log("Compartido con éxito"))
