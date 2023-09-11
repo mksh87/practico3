@@ -46,7 +46,6 @@ const GameComponent = ({ userName, pointsToWin, jugadas, mensajes }) => {
     // Cambiar el color del div del jugador
     const playerDiv = document.getElementById(`playerDiv${usuario}`);
     playerDiv.style.backgroundColor = "green";
-    playerDiv.innerHTML = "&#128526;";
 
     // Cambiar el color del div de la computadora
     const computerDiv = document.getElementById(`compDiv${computer}`);
@@ -55,10 +54,12 @@ const GameComponent = ({ userName, pointsToWin, jugadas, mensajes }) => {
 
     if (usuario === computer) {
       setRoundResult(`Empate. Muy poco original copiar a tu rival.`);
+      playerDiv.innerHTML = "&#128528;";
     } else {
       for (let r = 1; r < jugadas.length; r += 2) {
         if ((usuario + r) % jugadas.length === computer) {
           setScoreComputer(scoreComputer + 1);
+          playerDiv.innerHTML = "&#128530;";
           setRoundResult(
             `${jugadas[computer].toUpperCase()} ${
               mensajes[usuario][computer]
@@ -68,6 +69,7 @@ const GameComponent = ({ userName, pointsToWin, jugadas, mensajes }) => {
           );
         } else if ((usuario + 1 + r) % jugadas.length === computer) {
           setScorePlayer(scorePlayer + 1);
+          playerDiv.innerHTML = "&#128526;";
           setRoundResult(
             `${jugadas[usuario].toUpperCase()} ${
               mensajes[usuario][computer]
@@ -118,7 +120,16 @@ const GameComponent = ({ userName, pointsToWin, jugadas, mensajes }) => {
 
         {gameWinner ? (
           <h1 className="ganador">
-            Final de la partida. {gameWinner} se lleva la victoria!
+            {gameWinner === userName ? (
+              <span>
+                ¡¡{userName}!! ¡¡Has ganado!! ¡Siempre confiamos plenamente en
+                tí!
+              </span>
+            ) : (
+              <span>
+                Fin de la partida. Ha ganado la computadora. Ya se veía venir.
+              </span>
+            )}
           </h1>
         ) : (
           <div className="ganador"></div>

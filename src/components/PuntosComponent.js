@@ -17,6 +17,7 @@ const PuntosComponent = ({ onPointsSelect }) => {
       <button onClick={() => handlePointsSelect(1)}>1 punto</button>
       <button onClick={() => handlePointsSelect(3)}>3 puntos</button>
       <button onClick={() => handlePointsSelect(5)}>5 puntos</button>
+      <button onClick={() => handlePointsSelect(10)}>10 puntos</button>
     </div>
   );
 };

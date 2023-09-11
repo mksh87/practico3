@@ -48,6 +48,11 @@
   }
 }
 
+@font-face {
+  font-family: Brandon;
+  src: url(./style/Brandon-Grotesque-Cond-Web-Bold.woff);
+}
+
 #root {
   text-align: -webkit-center;
 }
@@ -57,7 +62,7 @@
 }
 
 body {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: Brandon;
   background-color: #f0f0f0;
   margin: 0;
   padding: 0;
@@ -121,6 +126,8 @@ button {
   font-size: 3vmin;
   background-color: rgb(228, 189, 189);
   border-radius: 10px;
+  margin: 0px 5px;
+  padding: 0px 10px;
 }
 
 .homegif {
@@ -163,10 +170,10 @@ button {
   background-color: #3498db;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 8px 12px;
   cursor: pointer;
   font-size: 3vmin;
-  margin-left: 4px;
+  /* margin-left: 4px; */
   filter: drop-shadow(0px 2px 2px darkblue);
 }
 
@@ -174,7 +181,6 @@ button {
 .casillero2 {
   border-radius: 43%;
   align-self: center;
-  width: fit-content;
 
   -moz-transition: all .2s ease-in;
   -o-transition: all .2s ease-in;
@@ -188,7 +194,7 @@ button {
 }
 
 .casillero2 {
-  padding: 4px 5px 4px 15px;
+  padding: 4px 5px 4px 13px;
   clip-path: polygon(0 50%, 50% 0, 100% 0, 100% 100%, 50% 100%, 0 50%);
 }
 
@@ -221,7 +227,11 @@ button {
   line-height: initial;
 }
 
-/* .ganador {} */
+.ganador {
+  color: green;
+  font-weight: bolder;
+  animation: fadeIn 3s;
+}
 
 .icon {
   font-size: 24px;
