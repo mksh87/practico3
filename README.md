@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# PIEDRA - PAPEL - TIJERAS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_En este proyecto se programó el clásico "piedra papel tijeras" y sus diferentes versiones para jugar online contra la computadora._
 
-## Available Scripts
+- PPT clásico (tres opciones). [Ver reglas](#ppt-clásico)
+- PPT Lagarto Spock (cinco opciones). [Ver reglas](#ppt-lagarto-spock)
+- PPT avanzado (siete opciones). [Ver reglas](#ppt-avanzado)
+- PPT extremo (nueve opciones). [Ver reglas](#ppt-extremo)
 
-In the project directory, you can run:
+## 1 - Dinámica del juego
 
-### `npm start`
+Cada paso del usuario va habilitando las opciones subsiguientes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1.1 - Elección de nombre
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+El usuario debe elegir un nombre y presionar enter. Si el campo está vacío o incumple alguna de las restricciones del form, no permite continuar y no aparece el mensaje de bienvenida.
 
-### `npm test`
+### 1.2 - Elección de modo de juego
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+En la pantalla principal se elige el modo de juego. Cada botón define una variable de modo que define los arreglos que arman las opciones y mensajes del juego.
 
-### `npm run build`
+### 1.3 - Cantidad de puntos para ganar
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A continuación el usuario elige la cantidad de puntos necesarios para ganar. Eso se almacena en una variable y controla cuando termina la partida. Si no se elige la cantidad de puntos no se procede el juego.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1.4 - Juego
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Una vez elegidas las configuraciones anteriores, se generan los botones con las opciones a elegir por el usuario.
+Cada vez que el usuario elige una opción, el resto ocurre automáticamente:
 
-### `npm run eject`
+- la computadora hace su elección.
+- muestra en pantalla la elección de ambos.
+- muestra el resultado de la jugada, con mensaje personalizado.
+- muestra el score parcial.
+- si alguno de los jugadores llega a la cantidad de puntos definidos en la sección 1.3, se determina el ganador con mensaje personalizado.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 1.5 - Resetear partida o cambiar de modo
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Para cambiar de modo, al principio de la página da las opciones del resto de los modos de juego disponibles. (Se considera la alternativa de mover estas opciones al final de la página o de cambiar su estructura para mejorar su visualización).
+Para resetear una partida, una vez iniciada el usuario cuenta con un botón al fondo de la página, el cual retorna a la opción de indicar cantida de puntos para ganar (sección 1.3).
+El reseteo puede realizarse en cualquier momento de la partida, aún si esta no ha terminado. Si la partida ha finalizado, es la única forma de reiniciar y que el usuario pueda continuar jugando (sin necesidad de refrescar la página).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 2 - Testing 🚀
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+El juego ha sido testeado en sus diferentes versiones, tanto en la jugabilidad, puntaje, respuestas según la jugada y la correcta elección de opciones por la computadora.
 
-## Learn More
+## 3 - Aspectos a mejorar ⚙️
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Mejorar la interfaz gráfica y mejorar estética.
+- Hacer transiciones más suaves para mostrar los eventos del juego (jugadas, resultados, puntaje, etc).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Modos de juego
 
-### Code Splitting
+A continuación se muestra los diagramas con las combinaciones de resultados según la elección de cada jugador:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### PPT Clásico
 
-### Analyzing the Bundle Size
+![Piedra Papel Tijeras clásico con tres opciones](./images/ppt3.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### PPT Lagarto Spock
 
-### Making a Progressive Web App
+![Piedra Papel Tijeras de cinco opciones](./images/ppt5.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### PPT avanzado
 
-### Advanced Configuration
+![Piedra Papel Tijeras de siete opciones](./images/ppt7.jpg)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### PPT extremo
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Piedra Papel Tijeras de nueve opciones](./images/ppt9.jpg)
