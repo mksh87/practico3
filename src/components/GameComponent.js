@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const GameComponent = ({ userName, pointsToWin, jugadas, mensajes }) => {
+function GameComponent({ userName, pointsToWin, jugadas, mensajes }) {
   const [scorePlayer, setScorePlayer] = useState(0);
   const [scoreComputer, setScoreComputer] = useState(0);
 
@@ -22,7 +22,7 @@ const GameComponent = ({ userName, pointsToWin, jugadas, mensajes }) => {
     }
   }, [scorePlayer, scoreComputer, pointsToWin, userName]);
 
-  const handleUserChoice = (choice) => {
+  function handleUserChoice(choice) {
     const computer = Math.floor(Math.random() * jugadas.length);
     const usuario = jugadas.indexOf(choice);
 
@@ -80,7 +80,7 @@ const GameComponent = ({ userName, pointsToWin, jugadas, mensajes }) => {
         }
       }
     }
-  };
+  }
 
   return (
     <div className="component">
@@ -137,6 +137,6 @@ const GameComponent = ({ userName, pointsToWin, jugadas, mensajes }) => {
       </div>
     </div>
   );
-};
+}
 
 export default GameComponent;

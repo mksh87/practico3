@@ -13,35 +13,35 @@ function App() {
   const [selectedPoints, setSelectedPoints] = useState(0); // Estado para almacenar los puntos seleccionados
 
   // Función para avanzar al siguiente paso
-  const nextStep = () => {
+  function nextStep() {
     setCurrentStep(currentStep + 1);
-  };
+  }
 
   // Función para volver a pantalla de cambio de nombre
-  const changeName = () => {
+  function changeName() {
     setCurrentStep(1);
     setSelectedMode("");
     setSelectedPoints(0);
-  };
+  }
 
   // Función para reiniciar y cambiar de modo
-  const restartMode = () => {
+  function restartMode() {
     setCurrentStep(2);
     setSelectedMode("");
     setSelectedPoints(0);
-  };
+  }
 
   // Función para reiniciar y elegir puntaje
-  const restartPoints = () => {
+  function restartPoints() {
     setCurrentStep(3);
     setSelectedPoints(0);
-  };
+  }
 
   // Función para manejar la selección del modo
-  const handleModeSelect = (mode) => {
+  function handleModeSelect(mode) {
     setSelectedMode(mode);
     nextStep(); // Avanza al siguiente paso (PuntosComponent)
-  };
+  }
 
   return (
     <div className="main">

@@ -4,14 +4,14 @@ import ppt5 from "../img/ppt5.svg";
 import ppt7 from "../img/ppt7.svg";
 import ppt9 from "../img/ppt9.svg";
 
-const ModoComponent = ({ userName, onModeSelect }) => {
+function ModoComponent({ userName, onModeSelect }) {
   // eslint-disable-next-line
   const [selectedMode, setSelectedMode] = useState(""); // Estado para almacenar el modo seleccionado
 
-  const handleModeSelect = (mode) => {
+  function handleModeSelect(mode) {
     setSelectedMode(mode);
     onModeSelect(mode); // Llama a la función para notificar la selección del modo
-  };
+  }
 
   return (
     <div className="component">
@@ -67,6 +67,6 @@ const ModoComponent = ({ userName, onModeSelect }) => {
       </h4>
     </div>
   );
-};
+}
 
 export default ModoComponent;

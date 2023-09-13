@@ -1,26 +1,26 @@
 import React, { useState } from "react";
 import logo from "../img/logo192.png";
 
-const NombreComponent = ({ onNameSubmit }) => {
+function NombreComponent({ onNameSubmit }) {
   const [name, setName] = useState("");
 
-  const handleNameChange = (e) => {
+  function handleNameChange(e) {
     setName(e.target.value);
-  };
+  }
 
-  const handleSubmit = () => {
+  function handleSubmit() {
     if (name.length > 0 && /^[a-zA-Z0-9]+$/.test(name) && name.length <= 15) {
       onNameSubmit(name);
     } else {
       alert("Por favor, ingrese un nombre válido.");
     }
-  };
+  }
 
-  const handleKeyPress = (e) => {
+  function handleKeyPress(e) {
     if (e.key === "Enter") {
       handleSubmit();
     }
-  };
+  }
 
   return (
     <div className="component">
@@ -46,6 +46,6 @@ const NombreComponent = ({ onNameSubmit }) => {
       <button onClick={handleSubmit}>Ingresar</button>
     </div>
   );
-};
+}
 
 export default NombreComponent;

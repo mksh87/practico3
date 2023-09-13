@@ -1,7 +1,7 @@
 import React from "react";
 import GameComponent from "./GameComponent";
 
-const LevelComponent = ({ userName, pointsToWin, onSelectedMode }) => {
+function LevelComponent({ userName, pointsToWin, onSelectedMode }) {
   let jugadas = [];
   let mensajes = [];
 
@@ -171,6 +171,6 @@ const LevelComponent = ({ userName, pointsToWin, onSelectedMode }) => {
       mensajes={mensajes}
     />
   );
-};
+}
 
 export default LevelComponent;

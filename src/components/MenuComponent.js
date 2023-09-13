@@ -2,15 +2,15 @@ import React from "react";
 import ShareButton from "./ShareComponent";
 
 const MenuComponent = ({ onChangeMode, onChangeName, onChangePoints }) => {
-  const handleChangeMode = () => {
+  function handleChangeMode() {
     onChangeMode();
-  };
-  const handleChangeName = () => {
+  }
+  function handleChangeName() {
     onChangeName();
-  };
-  const handleChangePoints = () => {
+  }
+  function handleChangePoints() {
     onChangePoints();
-  };
+  }
 
   return (
     <div>

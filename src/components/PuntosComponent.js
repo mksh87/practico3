@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-const PuntosComponent = ({ onPointsSelect }) => {
+function PuntosComponent({ onPointsSelect }) {
   // eslint-disable-next-line
   const [selectedPoints, setSelectedPoints] = useState(1);
 
-  const handlePointsSelect = (points) => {
+  function handlePointsSelect(points) {
     setSelectedPoints(points);
     onPointsSelect(points);
-  };
+  }
 
   return (
     <div className="component">
@@ -22,6 +22,6 @@ const PuntosComponent = ({ onPointsSelect }) => {
       <button onClick={() => handlePointsSelect(10)}>10 puntos</button>
     </div>
   );
-};
+}
 
 export default PuntosComponent;
