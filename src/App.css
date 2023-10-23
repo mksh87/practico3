@@ -163,7 +163,7 @@ button {
 
 .jugada {
   display: grid;
-  grid-template-columns: 6vh 4fr 6vh;
+  grid-template-columns: 5vh 1fr 5vh;
   margin: 5px;
 }
 

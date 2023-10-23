@@ -16,7 +16,6 @@ function ModoComponent({ userName, onModeSelect }) {
   return (
     <div className="component">
       <h1>¡Bienvenido..... {userName}!</h1>
-      <h5>¡Tranquilo! Te dejaremos jugar a pesar del nombre...</h5>
       <h3>¿Qué tan loco estás?</h3>
       <div className="mode-button-container">
         <a
